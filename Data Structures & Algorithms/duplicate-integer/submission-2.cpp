@@ -1,0 +1,16 @@
+class Solution {
+public:
+    bool hasDuplicate(vector<int>& nums) {
+        if(nums.empty())
+            return false;
+        unordered_set<int> st;
+
+        for(int i : nums)
+        {
+            if(st.find(i)!=st.end())
+                return true;
+            st.insert(i);
+        }
+        return false;
+    }
+};
